@@ -1,0 +1,84 @@
+Project: Simple SVG Drawing Tool
+
+This project is about creating a basic drawing app using the <canvas> element, along with HTML, CSS, and JavaScript.
+It lets users draw freely by clicking and dragging the mouse across the canvas.
+
+The tool works by listening to mouse events like mousedown, mousemove, mouseup, and mouseout, which together allow smooth and continuous drawing.
+
+HTML (Page Structure)
+
+The webpage has two main parts:
+
+Heading
+
+A <h3> tag shows the title "SVG Drawing Tool".
+
+Drawing Area
+
+A <canvas> element with the id "drawingCanvas".
+
+The canvas is 600px wide and 400px tall.
+
+This acts as the surface where users can draw.
+
+Script Section
+
+A <script> block contains the JavaScript code that makes the drawing tool work.
+
+CSS (Page Styling)
+
+Body
+
+The page is centered using flexbox (display: flex, justify-content: center, align-items: center).
+
+The height of the page is set to 100% of the screen (100vh).
+
+Canvas
+
+A 2px black border is added to highlight the drawing area.
+
+Background color is set to light grey (#f9f9f9).
+
+JavaScript (How It Works)
+
+Setup
+
+The canvas is selected using getElementById.
+
+A 2D drawing context is created with getContext("2d").
+
+Variables (isDrawing, lastX, lastY) are used to keep track of whether the user is drawing and where the mouse was last placed.
+
+Mouse Events
+
+mousedown → Starts drawing and remembers the starting position.
+
+mousemove → Draws lines as the mouse moves while clicked.
+
+mouseup → Stops drawing when the mouse button is released.
+
+mouseout → Stops drawing if the mouse leaves the canvas.
+
+Drawing Process
+
+beginPath() starts a new line.
+
+moveTo(lastX, lastY) moves to the previous point.
+
+lineTo(e.offsetX, e.offsetY) draws a line to the new point.
+
+stroke() makes the line visible.
+
+The line is blue with a 2px thickness.
+
+What I Learned
+
+How to use the <canvas> element to make interactive graphics.
+
+How to work with mouse events (mousedown, mousemove, mouseup, mouseout).
+
+How drawing functions like beginPath(), moveTo(), lineTo(), and stroke() work.
+
+How to update a webpage in real time without refreshing.
+
+How HTML, CSS, and JavaScript come together to build a small drawing application.
