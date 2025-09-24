@@ -1,0 +1,44 @@
+This program is a seat booking system built using Express.js. It runs on port 3000 and allows users to view seats, temporarily lock them, and confirm bookings. The system uses an in-memory object to store the status of each seat.
+
+At the start, all seats are marked as available, and each seat also has a lockExpiry property which helps manage lock timing. A constant LOCK_DURATION of one minute is used, meaning once a seat is locked, it must be confirmed within 60 seconds, otherwise it automatically becomes available again.
+
+The program provides three main endpoints:
+
+GET /seats
+This route shows the current status of all seats. Each seat can be in one of three states: available, locked, or booked.
+
+POST /lock/:seatId
+This route is used to temporarily lock a seat.
+
+If the seat does not exist, the system responds with a “Seat not found” message.
+
+If the seat is already locked or booked, it returns a conflict error.
+
+Otherwise, it marks the seat as locked, sets the expiry time, and also starts a timer (setTimeout) that will automatically reset the seat back to available if not confirmed within one minute.
+
+POST /confirm/:seatId
+This route is used to confirm a seat booking.
+
+If the seat doesn’t exist, the system returns an error.
+
+If the seat is locked and the lock is still valid (not expired), the system changes the status to booked.
+
+If the lock has expired or the seat was never locked, it returns a message saying the booking cannot be completed.
+
+Finally, the server is started, and a console message confirms that it is running on port 3000.
+
+Learning Outcomes
+
+By writing and running this program, I understood:
+
+How to create a REST API with Express.js and set up routes for different actions.
+
+How to design a simple state management system for seats using objects.
+
+How to use timers (setTimeout) to automatically reset seat status after a certain duration.
+
+How to return proper HTTP status codes (200 for success, 400 for bad request, 404 for not found, 409 for conflict).
+
+The concept of temporary locks in real-world booking systems, where seats are held for a short time before final confirmation.
+
+Overall, it gave me practical experience in handling multiple states (available, locked, booked) and enforcing timing constraints in a server-side application.

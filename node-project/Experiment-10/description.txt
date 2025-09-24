@@ -1,0 +1,41 @@
+The program is a simple Employee Management System that runs in the terminal. It begins by importing the necessary tool (readline) that allows the program to take input from the user and show output on the screen.
+
+It then sets up an interface where the user can type responses and the program can display prompts. After that, the program creates a small list of employees, each having a name and an ID.
+
+The heart of the program is the menu function, which shows the user four choices:
+
+Add Employee
+
+List Employees
+
+Remove Employee
+
+Exit
+
+When the user enters a choice:
+
+If they pick Add Employee, the system asks for the employee’s name and ID, adds them to the list, and confirms the addition.
+
+If they pick List Employees, it prints all employees with their names and IDs in order.
+
+If they pick Remove Employee, it asks for an ID, removes any employee with that ID, and shows a message.
+
+If they pick Exit, the program closes.
+
+If the user enters an invalid choice, the program warns them and shows the menu again. After every operation, the menu reappears, so the user can continue working until they decide to exit.
+
+Learning Outcomes
+
+By studying this program, you learn:
+
+How to design a menu-driven application that runs in a loop until the user exits.
+
+How to take user input and display output in a Node.js environment using the readline module.
+
+How to manage a collection of data using arrays of objects.
+
+Practical usage of array methods like adding items, listing them, and filtering them out.
+
+The concept of callbacks and asynchronous input, since the program waits for user responses before continuing.
+
+How to structure a small but complete interactive program, with a clear starting point, choices, and exit conditions.

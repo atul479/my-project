@@ -1,0 +1,33 @@
+This program is a simple REST API made using Express.js. It manages a small in-memory collection of playing cards. The server runs on port 3000 and exposes different routes to perform operations like viewing all cards, retrieving a card by its ID, adding a new card, and deleting a card.
+
+First, Express is set up and a middleware is added to read JSON data from the request body. Then, an array called cards is created which already contains three sample cards: Ace of Hearts, King of Spades, and Queen of Diamonds.
+
+The API has four main endpoints:
+
+GET /cards
+This endpoint returns the full list of cards in JSON format. It is used when the client wants to see all the cards at once.
+
+GET /cards/:id
+This is used to retrieve a specific card by its ID. The program checks if a card with the given ID exists in the array. If it does, that card is returned; otherwise, a “Card not found” error with status code 404 is sent.
+
+POST /cards
+This endpoint allows adding a new card. The client must provide the card’s suit and value in the request body. If either of these is missing, the server responds with a 400 error message. If both are present, the program creates a new card with a unique ID, adds it to the array, and returns it with a success status (201 Created).
+
+DELETE /cards/:id
+This endpoint deletes a card based on its ID. The program checks for the card’s position in the array. If found, it removes the card and responds with a message saying the card has been deleted, along with the deleted card details. If not found, it sends back a 404 error.
+
+Finally, the server is started, and it prints a message to the console so the user knows the application is running.
+
+Learning Outcomes
+
+By working on this program, I learned:
+
+How to set up a simple Express.js server and use middleware for handling JSON data.
+
+The difference between GET, POST, and DELETE HTTP methods in building REST APIs.
+
+How to manage and manipulate a collection of objects stored in memory.
+
+How to handle common error cases, like missing data or invalid IDs, using proper status codes (400 for bad request, 404 for not found, etc.).
+
+The basic flow of a RESTful application and how clients can interact with a backend server using endpoints.
