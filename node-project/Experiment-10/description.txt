@@ -1,4 +1,4 @@
-The program is a simple Employee Management System that runs in the terminal. It begins by importing the necessary tool (readline) that allows the program to take input from the user and show output on the screen.
+The program is a simple Employee Management System hat runs in the terminal. It begins by importing the necessary tool (readline) that allows the program to take input from the user and show output on the screen.
 
 It then sets up an interface where the user can type responses and the program can display prompts. After that, the program creates a small list of employees, each having a name and an ID.
 
