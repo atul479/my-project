@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 250px;
+  }
+
+  h1 {
+    font-size: 24px;
+    color: green;
+    margin: 0;
+  }
+
+  form {
+    display: grid;
+    gap: 10px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:first-child {
+    background: green;
+  }
+
+  button:last-child {
+    background: red;
